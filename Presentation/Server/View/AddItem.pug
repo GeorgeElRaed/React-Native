@@ -1,0 +1,104 @@
+html
+  head
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js')
+
+    script.
+      AddImages = () => {
+        var table = document.getElementById("images");
+
+        var InputField = document.createElement("input")
+        InputField.name = "ImagesSrc";
+        InputField.type = "text";
+        table.appendChild(document.createElement("br"));
+        table.appendChild(InputField);
+      }
+  body
+    form(method="POST" action="/Items/AddItem")
+      table#table.table
+        tr
+          td
+            | Description:
+          td
+            input(type='text', name='Description')
+        tr
+          td
+            | Price:
+          td
+            input(type='number', name='FullPrice')
+        tr
+          td
+            | Discount:
+          td
+            input(type='number', name='Discount')
+      
+        tr
+          td
+            | Currency:
+          td
+            input(type='text', name='Currency')
+      
+        tr
+          td
+            | ShippingMethods:
+          td
+            input(type='text', name='ShippingMethod')
+
+        tr
+          td
+            | Images:
+          td#images
+            input(type='text', name='ImagesSrc')
+          td
+            button.btn(type="button" onClick="AddImages()")
+              | add
+        tr
+          td
+            | Specifications
+          td
+          td
+        tr
+          td
+            | Name:
+          td
+            input(type='text', name='Name')
+        tr
+          td
+            | Model Number:
+          td
+            input(type='text', name='ModelNumber')
+        tr
+          td
+            | Brand:
+          td
+            input(type='text', name='Brand')
+        tr
+          td
+            | Memory:
+          td
+            input(type='text', name='Memory')
+        tr
+          td
+            | CPU:
+          td
+            input(type='text', name='CPU')
+        tr
+          td
+            | HDD:
+          td
+            input(type='text', name='HDD')
+        tr
+          td
+            | SSD:
+          td
+            input(type='text', name='SSD')
+        tr
+          td
+            | OS:
+          td
+            input(type='text', name='OS')
+
+      br
+      input.btn(type='submit', name='submit')
+      br
