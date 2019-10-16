@@ -9,15 +9,15 @@ const IP = "199.199.199.125";
 const PORT = 4000;
 ```
 
-in ./components/API/API.js to your machine's IP Address.
+in `/components/API/API.js` to your machine's IP Address.
 
 You can now run the server using nodemon. Just type (npm run watch) in a terminal and nodemon will watch for file changes and errors.
 
-To test the app on an android device/emulator run ./"react-native run-android".
+To test the app on an android device/emulator run `react-native run-android`.
 
 The app was not tested on iOS.
 
-To Add devices use ./localhost:4000/Items/AddItem
+To Add devices use `/localhost:4000/Items/AddItem`
 
 To Add a review simply tap Review Item in the Item's page.
 Click see more to view more in the review list (6 minimum for it to work)
